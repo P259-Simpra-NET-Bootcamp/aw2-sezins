@@ -51,15 +51,17 @@ namespace SimpraHomewroks.Apı.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Save(StaffCreateRequest staffCreateRequest)
+        public async Task<IActionResult> Save([FromBody] StaffCreateRequest staffCreateRequest)
         {
             var staff = await staffService.AddAsync(_mapper.Map<Staff>(staffCreateRequest));
-            var staffCreateRequests = _mapper.Map<StaffCreateRequest>(staff);
-            return CreateActionResult(CustomResponse<StaffCreateRequest>.Success(201,staffCreateRequests));
+
+            var staffResponse = _mapper.Map<StaffResponse>(staff);
+
+            return CreateActionResult(CustomResponse<StaffResponse>.Success(201, staffResponse));
         }
 
         [HttpPut]
-        public async Task<IActionResult> Update(StaffUpdateRequest staffUpdateRequest)
+        public async Task<IActionResult> Update([FromBody] StaffUpdateRequest staffUpdateRequest)
         {
             await staffService.UpdateAsync(_mapper.Map<Staff>(staffUpdateRequest));
             
