@@ -10,8 +10,9 @@ namespace Simpra_Homework_Core.UnitofWorks
     {
         Task CommitAsync();
         void Commit();
-        
+        Task DisposeAsync();
 
-        
+
+
     }
 }
