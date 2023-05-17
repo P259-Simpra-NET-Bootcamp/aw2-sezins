@@ -10,6 +10,7 @@ Projeyi ayağa kaldırmak için:
 
 
 ## Proje detay ve içerikleri: 
+
 1.Projenin Database’i  MsSQL kullanılılarak geliştirildi.
 2.Projenin backend’i ‘Web API’ projesi olup, NLayer Architecture yapısına uygun olarak dizayn edildi.
 3.RESTAPI PRINCIPLES VE CRUD Operations kullanıldı. (Model kullanarak GetAll, GetById , Put , Post , Delete methodlarini icen bir controller implement edildi. )
