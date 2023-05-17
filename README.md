@@ -1,7 +1,7 @@
 
 # SİMPRA_HOMEWORK2
 
-## Projeyi ayağa kaldırmak için:
+## Projeyi çalıştırmak için:
 1. SimpraHomewroks.Apı -> appsettings.json -> MsSQL tanımlamasındaki ‘Server’ bilgisini kendiMsSQL server adı ile değiştiriniz. 
 2. Package Manager Console -> Default Project -> SimpraHomework.Repository seçilir. 
 3. Add-migration v1.1 veya EntityFramework6\Add-Migration initial komutu girilerek migration oluşturulur. 
