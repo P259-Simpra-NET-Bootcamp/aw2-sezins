@@ -1,3 +1,4 @@
+using FluentValidation.AspNetCore;
 using Microsoft.EntityFrameworkCore;
 using Simpra_Homework_Core.Repositories;
 using Simpra_Homework_Core.Services;
@@ -8,10 +9,13 @@ using SimpraHomework.Repository.Repositories;
 using SimpraHomework.Repository.UnitofWork;
 using SimpraHomework.Service.Mapping;
 using SimpraHomework.Service.Service;
+using SimpraHomework.Service.Validation;
 using SimpraHomewroks.Apý.Middlewares;
 using System.Reflection;
 
 var builder = WebApplication.CreateBuilder(args);
+
+builder.Services.AddControllers().AddFluentValidation(x => x.RegisterValidatorsFromAssemblyContaining<StaffCreateRequestValidatior>());
 
 // Add services to the container.
 
